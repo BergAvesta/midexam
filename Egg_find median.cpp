@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+//#include <iostream>      原本想讓使用者自由輸入數列個數 
+//using namespace std;     可是生出的數列會在最後面跑出0 求教授解答 
 
 int main()
 {
@@ -8,6 +10,8 @@ int main()
 	
 	//Create N random integers
 	srand(time(0));
+	//cout << "請輸入數列個數(奇數) : ";     時間不夠，防奧客機製有機會再研究 ,而且重點是尾巴跑出0還沒解決 
+	//cin >> N;      						  應該是if N=even cout << "請不要當奧客 乖乖打奇數" 這樣 
 	N = 11;
 	v = (int *) malloc( N * sizeof(int));
 	for(i=0;i<N;++i)
@@ -40,5 +44,5 @@ int main()
 	printf("\n");
 	}
 	printf("中位數= %d",v[(N-1)/2]);
-	return 0;
+	return 1;
 }
